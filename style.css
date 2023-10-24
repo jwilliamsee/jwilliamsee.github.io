@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,7 +9,7 @@
 }
 
 body {
-    background-color: black;
+    background-color: hsl(0, 0%, 0%);
     color: rgb(123, 255, 0);
 }
 
@@ -64,6 +65,7 @@ body {
     font-size: 56px;
     font-weight: 700;
     line-height: 1.2;
+    color: rgb(212, 204, 204);
 }
 
 .home-content h3 {
@@ -75,7 +77,7 @@ body {
 .home-content p {
     font-size: 15px;
     margin: 20px 0 30px;
-    color: rgb(212, 204, 204);
+    color: rgb(209, 212, 204);
 }
 
 .home-content .btn-box {
@@ -181,7 +183,7 @@ body {
 }
 
 .about {
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -206,7 +208,7 @@ body {
     align-items: center;
 }
 
-.about-img img{
+.about-img img {
     width: 40%;
     border-radius: 20%;
     border: .2rem solid var(rgb(212, 204, 204));
@@ -250,6 +252,7 @@ body {
 .btn-box.btns a::before {
     background: transparent;
 }
+
 .education {
     display: flex;
     justify-content: center;
@@ -368,28 +371,118 @@ body {
 }
 
 .skills-column:nth-child(1) .skills-content .progress:nth-child(1) .bar span {
+    width: 80%;
+}
+
+.skills-column:nth-child(1) .skills-content .progress:nth-child(2) .bar span {
+    width: 80%;
+}
+
+.skills-column:nth-child(1) .skills-content .progress:nth-child(3) .bar span {
+    width: 80%;
+}
+
+.skills-column:nth-child(1) .skills-content .progress:nth-child(4) .bar span {
     width: 60%;
 }
-.skills-column:nth-child(1) .skills-content .progress:nth-child(2) .bar span {
-    width: 20%;
+
+.skills-column:nth-child(1) .skills-content .progress:nth-child(5) .bar span {
+    width: 50%;
 }
-.skills-column:nth-child(1) .skills-content .progress:nth-child(3) .bar span {
+
+.skills-column:nth-child(1) .skills-content .progress:nth-child(6) .bar span {
+    width: 50%;
+}
+
+.skills-column:nth-child(1) .skills-content .progress:nth-child(7) .bar span {
     width: 40%;
 }
-.skills-column:nth-child(1) .skills-content .progress:nth-child(4) .bar span {
-    width: 20%;
-}
-
 
 .skills-column:nth-child(2) .skills-content .progress:nth-child(1) .bar span {
-    width: 10%;
+    width: 100%;
 }
+
 .skills-column:nth-child(2) .skills-content .progress:nth-child(2) .bar span {
-    width: 10%;
+    width: 90%;
 }
+
 .skills-column:nth-child(2) .skills-content .progress:nth-child(3) .bar span {
-    width: 0%;
+    width: 90%;
 }
+
 .skills-column:nth-child(2) .skills-content .progress:nth-child(4) .bar span {
-    width: 10%;
+    width: 100%;
+}
+
+.skills-column:nth-child(2) .skills-content .progress:nth-child(5) .bar span {
+    width: 90%;
+}
+
+.carrousel{
+    width: 100%;
+}
+
+.conteCarrousel{
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.itemCarrousel{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.itemCarrouselTarjeta{
+    width: 100%;
+    height: 100%;
+}
+
+.itemCarrouselArrows{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px; 
+}
+
+.itemCarrouselArrows > i:hover {
+    cursor: pointer;
+}
+
+.conteCarrouselController{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.conteCarrouselController > a{
+    text-decoration: none;
+    font-size: 1em;
+    color: grey;
+}
+
+.itemCarrouselArrows > a > i{
+    color: rgb(212, 204, 204);
+}
+
+i{
+    color: rgb(123, 255, 0);
+}
+
+img{
+    position: center;
+    width: 50%;
+    height: 100%;
+}
+
+.Contact-me{
+    position: relative;
 }
