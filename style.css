@@ -423,12 +423,9 @@ body {
 }
 
 .conteCarrousel{
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
     width: 100%;
     height: auto;
+    max-height: 800px;
     overflow: hidden;
 }
 
@@ -444,7 +441,6 @@ body {
     width: 100%;
     height: auto;
     aspect-ratio: 16 / 9;
-    display: block;
 }
 
 .itemCarrouselArrows{
