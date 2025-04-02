@@ -428,7 +428,8 @@ body {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     width: 100%;
-    height: 500px;
+    height: auto;
+    overflow: hidden;
 }
 
 .itemCarrousel{
@@ -441,7 +442,7 @@ body {
 
 .itemCarrouselTarjeta iframe {
     width: 100%;
-    height: 100%;
+    height: auto;
     aspect-ratio: 16 / 9;
     display: block;
 }
