@@ -449,8 +449,8 @@ body {
 
 .itemCarrouselTarjeta img {
     width: 90%;
-    height: 90%;
-    max-height: 500px;
+    max-width: 500px;
+    height: auto;
     object-fit: cover;
 }
     
