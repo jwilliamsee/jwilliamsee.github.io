@@ -442,15 +442,23 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    /*padding: 20px; /*se elimina*/
+    width: 100%;
+    height: 100%;
 }
 
-.itemCarrouselTarjeta img,
-.itemCarrouselTarjeta iframe {
+.itemCarrouselTarjeta img {
     width: 90%;
     height: 90%;
     max-height: 500px;
     object-fit: cover;
+}
+    
+.itemCarrouselTarjeta iframe {
+    width: 80%;
+    max-width: 800px;
+    height: 450px;
+    aspect-ratio: 16 / 9;
 }
 
 .itemCarrouselArrows{
