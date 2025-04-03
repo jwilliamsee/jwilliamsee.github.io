@@ -451,7 +451,7 @@ body {
     width: 90%;
     max-height: 500px;
     height: 90%;
-    object-fit: cover;
+    object-fit: contain;
 }
     
 .itemCarrouselTarjeta iframe {
