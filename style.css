@@ -47,18 +47,39 @@ body {
     color: rgb(212, 204, 204);
 }
 
+.navbar {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    color: rgb(212, 204, 204);
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0.25rem;
+}
+
+.menu-toggle:focus {
+    outline: none;
+}
+
 .home {
     height: 100vh;
     background: url('Fotoweb.png') no-repeat;
-    background: cover;
+    background-size: cover;
     background-position: right;
     display: flex;
     align-items: center;
-    padding: 10%;
+    padding: 10% 10% 10% 0; /* keep top/right/bottom, remove left */
 }
 
 .home-content {
     max-width: 550px;
+    margin-left: 0;
 }
 
 .home-content h1 {
@@ -83,7 +104,7 @@ body {
 .home-content .btn-box {
     display: flex;
     justify-content: space-between;
-    width: 300xp;
+    width: 300px;
     height: 50px;
 }
 
@@ -97,7 +118,7 @@ body {
     background: black;
     border: 2px solid rgb(123, 255, 0);
     border-radius: 8px;
-    font-size: 19xp;
+    font-size: 19px;
     color: rgb(212, 204, 204);
     text-decoration: none;
     font-weight: 600;
@@ -146,6 +167,7 @@ body {
     width: 100px;
     display: flex;
     justify-content: space-between;
+    left: 10%;
 }
 
 .home-sci a {
@@ -187,26 +209,49 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
     background: #000;
-    padding-bottom: 6rem;
+    padding: 2rem 0 2.5rem;
 }
 
 .heading {
-    font-size: 5rem;
-    margin-bottom: 3rem;
+    font-size: 3.8rem;
+    margin-bottom: 1.5rem;
     text-align: center;
+}
+
+.about-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    width: 100%;
+    padding: 0 0 0 1in;
+}
+
+.site-inner {
+    width: min(100%, 980px);
+    margin: 0 auto;
+    padding-left: 1in;
+}
+
+.home .site-inner {
+    padding-left: 0; /* keep no extra padding */
+    margin-left: 1in; /* shift the block 1in to the right as requested */
 }
 
 .about-img {
     position: relative;
-    width: 25rem;
-    height: 25rem;
+    width: 20.5rem;
+    height: 20.5rem;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    flex: 0 0 20.5rem;
+    box-shadow: 0 18px 36px rgba(0, 0, 0, 0.22);
+    margin-right: 3rem;
 }
 
 .about-img img {
@@ -235,27 +280,49 @@ body {
 }
 
 .about-content {
-    text-align: center;
+    text-align: left;
+    flex: 1;
+    min-width: 320px;
+    max-width: 56rem;
 }
 
 .about-content h3 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: rgb(212, 204, 204);
+    text-align: center;
+    margin-bottom: 0.6rem;
 }
 
 .about-content p {
-    font-size: 1.6rem;
-    margin: 1rem 0 1rem;
+    font-size: 1.4rem;
+    margin: 0.9rem 0 1rem;
     color: rgb(212, 204, 204);
+    line-height: 1.75;
 }
 
-.btn-box.btns {
-    display: flex;
-    width: 15rem;
+.section-subtitle {
+    font-size: 1.4rem;
+    color: rgb(209, 212, 204);
+    max-width: 76rem;
+    margin: 0.8rem auto 2rem;
+    text-align: center;
+    line-height: 1.8;
 }
 
-.btn-box.btns a::before {
-    background: transparent;
+.edu-block,
+.exp-block {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto 2rem;
+    padding: 0 0.25rem;
+}
+
+.education > .edu-block .title,
+.education > .exp-block .title {
+    font-size: 2.5rem;
+    margin: 0 0 1rem;
+    color: rgb(212, 204, 204);
+    text-align: center;
 }
 
 .education {
@@ -268,56 +335,422 @@ body {
 }
 
 .education .education-row {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(400px, 1fr));
+    gap: 5.5rem;
+    width: min(100%, 1300px);
+    margin: 0 auto;
+    justify-items: stretch;
+}
+
+.education .education-row::before {
+    content: '';
+    position: absolute;
+    top: 2rem;
+    bottom: 2rem;
+    left: 50%;
+    width: 1px;
+    background: rgba(123, 255, 0, 0.2);
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+
+.education-row .content {
+    position: relative;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.18);
+    margin-bottom: 1.5rem;
     display: flex;
-    flex-wrap: wrap;
-    gap: 5rem;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.education-row .content .year {
+    order: 1;
+}
+
+.education-row .content .year::after {
+    content: '';
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    background: url('FotoJEPortada.jpeg') center/cover no-repeat;
+    background-size: cover;
+    border-radius: 0.4rem;
+    border: .1rem solid rgba(212, 204, 204, 0.85);
+    margin: 0.75rem 0 0;
+}
+
+.education-row .content h3 {
+    order: 2;
+    margin: 0;
+}
+
+.education-row .content p {
+    order: 3;
+    margin: 0;
+    padding-top: 0;
 }
 
 .education-row .education-column {
-    flex: 1 1 40rem;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(123, 255, 0, 0.15);
+    border-radius: 1.2rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 420px;
 }
 
 .education-column .title {
     font-size: 2.5rem;
-    margin: 0 0 1.5rem 2rem;
+    margin: 0;
     color: rgb(212, 204, 204);
 }
 
 .education-column .education-box {
-    border-left: .2rem solid rgb(123, 255, 0);
+    border-left: none;
 }
 
 .education-box .education-content {
     position: relative;
-    padding-left: 2rem;
+    padding-left: 0;
     color: rgb(212, 204, 204);
 }
 
-.education-content .content {
-    position: relative;
-    padding: 1.5rem;
-    border: .2rem solid rgb(123, 255, 0);
-    border-radius: .6rem;
-    margin-bottom: 2rem;
-}
-
 .education-content .content .year {
-    font-size: 1.5rem;
-    padding-bottom: .5rem;
+    font-size: 1.45rem;
+    padding-bottom: 5.5rem;
+    display: inline-flex;
+    align-items: center;
+    gap: .6rem;
+    color: rgb(123, 255, 0);
+    border: .1rem solid rgba(123, 255, 0, 0.35);
+    border-radius: 1rem;
+    padding: .65rem 1rem;
 }
 
 .education-content .content .year i {
-    padding-right: .5rem;
+    padding-right: 0;
 }
 
 .education-content .content h3 {
-    font-size: 2rem;
+    font-size: 1.9rem;
+    margin: .75rem 0 .6rem;
 }
 
 .education-content .content p {
-    font-size: 1.6rem;
-    padding-top: .5rem;
+    font-size: 1.5rem;
+    padding-top: .4rem;
+    color: rgb(212, 204, 204);
 }
+
+@media (max-width: 900px) {
+    .header {
+        padding: 18px 5%;
+    }
+
+    .navbar a {
+        margin-left: 18px;
+        font-size: 16px;
+    }
+
+    .home {
+        padding: 8% 5% 5% 5%;
+        background-position: center;
+    }
+
+    .home-content h1 {
+        font-size: 44px;
+    }
+
+    .home-content h3 {
+        font-size: 26px;
+    }
+
+    .home-content p {
+        font-size: 1.05rem;
+    }
+
+    .home-content .btn-box {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+    }
+
+    .btn-box a {
+        width: 100%;
+    }
+
+    .home-sci {
+        left: 5%;
+        bottom: 20px;
+    }
+
+    .home-imgHover {
+        display: none;
+    }
+
+    .about-body {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+        padding: 0 1.5rem;
+    }
+
+    .about-content {
+        text-align: center;
+    }
+
+    .about-img {
+        width: 20rem;
+        height: 20rem;
+        margin-right: 0;
+    }
+
+    .section-subtitle {
+        padding: 0 1.5rem;
+    }
+
+    .education .education-row {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .education .education-row::before {
+        display: none;
+    }
+
+    .education-row .education-column {
+        max-width: none;
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    .skills .skills-row {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .skills-row .skills-column {
+        flex: 1 1 100%;
+    }
+
+    .skills-column .title {
+        font-size: 2rem;
+    }
+
+    .carrousel {
+        padding: 1.5rem 0 1rem;
+    }
+
+    .conteCarrousel {
+        height: auto;
+        min-height: 420px;
+    }
+
+    .itemCarrouselTarjeta img,
+    .itemCarrouselTarjeta iframe {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .itemCarrouselArrows a {
+        width: 42px;
+        height: 42px;
+        font-size: 1.2rem;
+    }
+
+    .conteCarrouselController {
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 18px 4%;
+        gap: 1rem;
+    }
+
+    .navbar {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        position: absolute;
+        top: 100%;
+        right: 4%;
+        left: 4%;
+        flex-direction: column;
+        align-items: stretch;
+        background: rgba(0, 0, 0, 0.96);
+        border: 1px solid rgba(123, 255, 0, 0.16);
+        border-radius: 1rem;
+        overflow: hidden;
+        max-height: 0;
+        padding: 0;
+        transition: max-height 0.3s ease, padding 0.3s ease;
+        z-index: 80;
+    }
+
+    .navbar.active {
+        max-height: 360px;
+        padding: 1rem 0;
+    }
+
+    .navbar a {
+        margin-left: 0;
+        font-size: 15px;
+        padding: 0.9rem 1.25rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .navbar a:last-child {
+        border-bottom: none;
+    }
+
+    .menu-toggle {
+        display: inline-flex;
+    }
+
+    .home {
+        padding: 6rem 4rem 4rem;
+    }
+
+    .home-content h1 {
+        font-size: 34px;
+    }
+
+    .home-content h3 {
+        font-size: 22px;
+    }
+
+    .home-sci {
+        width: auto;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .about-img {
+        width: 18rem;
+        height: 18rem;
+    }
+
+    .about-content h3 {
+        font-size: 1.8rem;
+    }
+
+    .education-row .content {
+        padding: 1rem;
+    }
+
+    .education-row .education-column {
+        padding: 1.25rem;
+    }
+
+    .skills-box {
+        padding: 1.25rem;
+    }
+
+    .skills-list li {
+        font-size: 1.35rem;
+        padding: 0.95rem 1rem 0.95rem 2.4rem;
+    }
+}
+
+@media (max-width: 520px) {
+    .header {
+        padding: 14px 3%;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .navbar a {
+        font-size: 14px;
+    }
+
+    .home {
+        padding: 5rem 1.5rem 3rem;
+    }
+
+    .home-content h1 {
+        font-size: 28px;
+    }
+
+    .home-content h3 {
+        font-size: 20px;
+    }
+
+    .home-content p {
+        font-size: 1rem;
+    }
+
+    .btn-box {
+        gap: 0.5rem;
+    }
+
+    .btn-box a {
+        height: 46px;
+    }
+
+    .about-img {
+        width: 15rem;
+        height: 15rem;
+    }
+
+    .about-content p {
+        font-size: 1.2rem;
+    }
+
+    .heading {
+        font-size: 2.4rem;
+    }
+
+    .section-subtitle {
+        font-size: 1.15rem;
+        padding: 0 1rem;
+    }
+
+    .skills-column .title {
+        font-size: 1.9rem;
+    }
+
+    .skills-list li {
+        font-size: 1.25rem;
+        padding: 0.85rem 0.9rem 0.85rem 2.3rem;
+    }
+
+    .conteCarrousel {
+        min-height: 300px;
+    }
+
+    .itemCarrouselArrows a {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+.btn-box.btns {
+    display: flex;
+    width: 15rem;
+}
+
+.btn-box.btns a::before {
+    background: transparent;
+}
+
 
 .skills {
     min-height: auto;
@@ -327,112 +760,87 @@ body {
 .skills .skills-row {
     display: flex;
     flex-wrap: wrap;
-    gap: 5rem;
+    gap: 4rem;
 }
 
 .skills-row .skills-column {
     flex: 1 1 40rem;
+    min-width: 280px;
 }
 
 .skills-column .title {
-    font-size: 2.5rem;
-    margin: 0 0 1.5rem;
+    font-size: 2.4rem;
+    margin: 0 0 1rem;
+    color: rgb(233, 241, 247);
+    letter-spacing: 0.2rem;
 }
 
-.skills-box .skills-content {
+.skills-box {
+    border: none;
+    border-radius: 1.2rem;
+    padding: 1.5rem;
+    background: rgba(18, 18, 18, 0.95);
+    box-shadow: 0 24px 50px rgba(0, 0, 0, 0.2);
+}
+
+.skills-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    display: grid;
+    gap: 1rem;
+}
+
+.skills-list li {
     position: relative;
-    border: .2rem solid rgb(123, 255, 0);
-    border-radius: .6rem;
-    padding: .5rem 1.5rem;
+    padding: 1rem 1rem 1rem 2.6rem;
+    font-size: 1.45rem;
+    line-height: 1.8;
+    color: rgb(214, 214, 214);
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 0.9rem;
+    border: 1px solid rgba(123, 255, 0, 0.12);
+    transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
-.skills-content .progress {
-    padding: 1rem 0;
+.skills-list li::before {
+    content: '';
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #7cff00, #00d4ff);
+    box-shadow: 0 0 12px rgba(124, 255, 0, 0.45);
 }
 
-.skills-content .progress h3 {
-    font-size: 1.7rem;
-    display: flex;
-    justify-content: space-between;
+.skills-list li:hover {
+    transform: translateX(3px);
+    border-color: rgba(123, 255, 0, 0.25);
 }
 
-.skills-content .progress h3 span {
-    color: rgb(212, 204, 204);
+.skills-list li strong {
+    color: rgb(255, 255, 255);
 }
 
-.skills-content .progress .bar {
-    height: 2.5rem;
-    border-radius: .6rem;
-    border: .2rem solid rgb(123, 255, 0);
-    padding: .5rem;
-    margin: 1rem 0;
+.carrousel {
+    width: min(100%, 1100px);
+    margin: 0 auto;
+    padding: 2rem 0 1rem;
 }
 
-.skills-content .progress .bar span {
-    display: block;
-    height: 100%;
-    border-radius: .3rem;
-    background: grey;
-}
-
-.skills-column:nth-child(1) .skills-content .progress:nth-child(1) .bar span {
-    width: 80%;
-}
-
-.skills-column:nth-child(1) .skills-content .progress:nth-child(2) .bar span {
-    width: 80%;
-}
-
-.skills-column:nth-child(1) .skills-content .progress:nth-child(3) .bar span {
-    width: 80%;
-}
-
-.skills-column:nth-child(1) .skills-content .progress:nth-child(4) .bar span {
-    width: 60%;
-}
-
-.skills-column:nth-child(1) .skills-content .progress:nth-child(5) .bar span {
-    width: 50%;
-}
-
-.skills-column:nth-child(1) .skills-content .progress:nth-child(6) .bar span {
-    width: 50%;
-}
-
-.skills-column:nth-child(1) .skills-content .progress:nth-child(7) .bar span {
-    width: 40%;
-}
-
-.skills-column:nth-child(2) .skills-content .progress:nth-child(1) .bar span {
-    width: 100%;
-}
-
-.skills-column:nth-child(2) .skills-content .progress:nth-child(2) .bar span {
-    width: 90%;
-}
-
-.skills-column:nth-child(2) .skills-content .progress:nth-child(3) .bar span {
-    width: 90%;
-}
-
-.skills-column:nth-child(2) .skills-content .progress:nth-child(4) .bar span {
-    width: 100%;
-}
-
-.skills-column:nth-child(2) .skills-content .progress:nth-child(5) .bar span {
-    width: 90%;
-}
-
-.carrousel{
-    width: 90%;
-}
-
-.conteCarrousel{
+.conteCarrousel {
     display: flex;
     flex-wrap: nowrap;
     overflow: hidden;
     width: 100%;
-    height: 600px;
+    height: 620px;
+    border-radius: 2rem;
+    background: rgba(10, 10, 10, 0.95);
+    border: 1px solid rgba(123, 255, 0, 0.12);
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.22);
 }
 
 .conteCarrousel .itemCarrousel {
@@ -442,73 +850,113 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
+    padding: 1rem;
 }
 
 .itemCarrouselTarjeta {
     display: flex;
     align-items: center;
     justify-content: center;
-    /*padding: 20px; /*se elimina*/
     width: 100%;
     height: 100%;
 }
 
 .itemCarrouselTarjeta img {
     width: 90%;
-    max-height: 500px;
-    height: 90%;
+    max-height: 560px;
     object-fit: contain;
+    border-radius: 1.6rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(123, 255, 0, 0.12);
 }
     
 .itemCarrouselTarjeta iframe {
-    width: 80%;
-    max-width: 800px;
-    height: 450px;
+    width: 90%;
+    max-width: 900px;
+    height: 90%;
     aspect-ratio: 16 / 9;
+    border-radius: 1.6rem;
+    border: 1px solid rgba(123, 255, 0, 0.12);
 }
 
-.itemCarrouselArrows{
+.itemCarrouselArrows {
     position: absolute;
     top: 50%;
     left: 0;
     right: 0;
     transform: translateY(-50%);
-    width: 100%; 
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 20px;
+    padding: 0 1rem;
     z-index: 10;
+    pointer-events: none;
 }
+
 .itemCarrouselArrows a {
-    font-size: 2em; /* Aumenta el tamaño de las flechas */
-    color: white; /* Puedes cambiar el color según tu diseño */
-    background: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para mayor visibilidad */
-    padding: 10px;
+    pointer-events: auto;
+    width: 48px;
+    height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    color: rgb(123, 255, 0);
+    background: rgba(255, 255, 255, 0.08);
     border-radius: 50%;
+    border: 1px solid rgba(123, 255, 0, 0.2);
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.itemCarrouselArrows a:hover {
+    transform: scale(1.08);
+    background: rgba(123, 255, 0, 0.16);
 }
 
 .itemCarrouselArrows > i:hover {
     cursor: pointer;
 }
 
-.conteCarrouselController{
+.conteCarrouselController {
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 1rem;
 }
 
-.conteCarrouselController > a{
-    text-decoration: none;
-    font-size: 1em;
-    color: grey;
+.conteCarrouselController > a {
+    width: auto;
+    height: auto;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.45rem;
+    color: rgb(170, 170, 170);
+    border-radius: 0.9rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(170, 170, 170, 0.16);
+    transition: background 0.2s ease, transform 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
-.itemCarrouselArrows > a > i{
-    color: rgb(212, 204, 204);
+.conteCarrouselController > a i {
+    font-size: 0.95rem;
 }
 
-i{
+.conteCarrouselController > a:hover,
+.conteCarrouselController > a:focus {
+    background: rgba(170, 170, 170, 0.16);
+    color: rgb(200, 200, 200);
+    border-color: rgba(200, 200, 200, 0.28);
+    transform: scale(1.05);
+}
+
+.itemCarrouselArrows > a > i {
+    color: inherit;
+}
+
+/* Keep global icon color from interfering with slider buttons */
+i {
     color: rgb(123, 255, 0);
 }
 

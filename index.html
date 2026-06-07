@@ -19,10 +19,14 @@
             <a href="#portfolio">Portfolio</a>
             <a href="#contact">Contact</a>
         </nav>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">
+            <i class='bx bx-menu'></i>
+        </button>
     </header>
     <section>
         <div class="home">
-            <div class="home-content">
+            <div class="site-inner">
+                <div class="home-content">
                 <h1>I'm José Escobar​</h1>
                 <ul>
                     <li>
@@ -40,6 +44,8 @@
                     <a href="https://www.facebook.com/jwilliamsee/" target="_blank">Let's talk</a>
                 </div>
             </div>
+                </div>
+            </div>
             <div class="home-sci">
                 <a href="https://www.facebook.com/jwilliamsee/" target="_blank"><i class='bx bxl-facebook-circle'></i></a>
                 <a href="https://www.instagram.com/williams_e_e/" target="_blank"><i class='bx bxl-instagram'></i></a>
@@ -49,199 +55,189 @@
     <!--Section design-->
     <section class="about" id="about">
         <h2 class="heading">About <span>Me</span></h2>
-        <div class="about-img">
-            <img class="about-photo" src="FotoJEPortada.jpeg" alt="Foto de José Escobar">
-            <span class="circle-spin"></span>
-        </div>
-        <div class="about-content">
-            <h3>Electromechanical</h3>
-            <p>Electromechanical with 2.5 years of experience in 3D design of mechanical components and 3D design of components
-                for electronic assemblies, I have developed my career in mechanical and electronic design since I was a student, 
-                which has helped me to adapt in environments where practical and theoretical knowledge is required, I am passionate 
-                about my work in the design and I want to continue developing my career in this area.
-            </p>
-            <h4>Séneca: "La suerte es donde confluyen la preparación y la oportunidad".</h4>
+        <div class="about-body">
+            <div class="about-img">
+                <img class="about-photo" src="FotoJEPortada.jpeg" alt="Foto de José Escobar">
+                <span class="circle-spin"></span>
+            </div>
+            <div class="about-content">
+                <h3>Electromechanical</h3>
+                <p>Electromechanical with 2.5 years of experience in 3D design of mechanical components and 3D design of components
+                    for electronic assemblies, I have developed my career in mechanical and electronic design since I was a student, 
+                    which has helped me to adapt in environments where practical and theoretical knowledge is required, I am passionate 
+                    about my work in the design and I want to continue developing my career in this area.
+                </p>
+                <h4>Séneca: "La suerte es donde confluyen la preparación y la oportunidad".</h4>
+            </div>
         </div>
     </section>
 
     <!-- Education & Experience section design-->
     <section class="education" id="education">
         <h2 class="headin">My <span>Journey</span></h2>
-        <div class="education-row">
-            <div class="education-column">
-                <h3 class="title">Education</h3>
-                <div class="education-box">
-                    <div class="education-content">
-                        <div class="content">
-                            <div class="year"><i class='bx bxs-calendar'></i>August 2015 - June 2020</div>
-                            <h3>Bachelor's in Electromechanical Engineering</h3>
-                            <p>Instituto Tecnológico de Ensenada</p>
-                            <p>Specialization in </p>
-                            <p>Baja California, México.</p>
+        <p class="section-subtitle">Education and professional experience displayed clearly, with Education first, then Professional Experience below.</p>
+
+        <!-- Education block: three-column grid (content may repeat) -->
+        <div class="edu-block">
+            <h3 class="title">Education</h3>
+            <div class="education-row">
+                <div class="education-column">
+                    <div class="education-box">
+                        <div class="education-content">
+                            <div class="content">
+                                <div class="year"><i class='bx bxs-calendar'></i>Aug 2015 – Jun 2020</div>
+                                <h3>Bachelor in Electromechanical Engineering</h3>
+                                <p>Instituto Tecnológico de Ensenada, Baja California, México</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="education-content">
-                        <div class="content">
-                            <div class="year"><i class='bx bxs-calendar'></i>May 2022</div>
-                            <h3>Online course "Analysis-Root-Cause"</h3>
-                            <p>UDEMY online platform</p>
-                        </div>
-                    </div>
-                    <div class="education-content">
-                        <div class="content">
-                            <div class="year"><i class='bx bxs-calendar'></i>July 2022</div>
-                            <h3>Online course "Structural members with SolidWorks"</h3>
-                            <p>SolidServicios online platform</p>
-                        </div>
-                    </div>
-                    <div class="education-content">
-                        <div class="content">
-                            <div class="year"><i class='bx bxs-calendar'></i>September 2022</div>
-                            <h3>CAE Fundamentals "Computer Aided Engineering"</h3>
-                            <p>iESSS/Ansys online platform</p>
-                        </div>
-                    </div>
-                    <div class="education-content">
-                        <div class="content">
-                            <div class="year"><i class='bx bxs-calendar'></i>May 2017</div>
-                            <h3>"Basic Electropneumatics" Course</h3>
-                            <p>Instituto Tecnológico de Zacatepec</p>
-                            <p>Zacatepec, Morelos, México.</p>
+                        <div class="education-content">
+                            <div class="content">
+                                <div class="year"><i class='bx bxs-calendar'></i>May 2022</div>
+                                <h3>Root Cause Analysis</h3>
+                                <p>Udemy</p>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="education-column">
-                    <h3 class="title">Experience</h3>
                     <div class="education-box">
                         <div class="education-content">
                             <div class="content">
-                                <div class="year"><i class='bx bxs-calendar'></i>November 2022 - Present</div>
-                                <h3>Junior mechanical design engineer</h3>
-                                <p>Freelance - Constantly active mechanical design projects</p>
-                                <p>Home office</p>
+                                <div class="year"><i class='bx bxs-calendar'></i>Jul 2022</div>
+                                <h3>Structural Members with SolidWorks</h3>
+                                <p>SolidServicios</p>
                             </div>
                         </div>
                         <div class="education-content">
                             <div class="content">
-                                <div class="year"><i class='bx bxs-calendar'></i>July 2022 - September 2022</div>
-                                <h3>Cabinet design engineer</h3>
-                                <p>McCain Traffic Suply</p>
-                                <p>Tijuana, Baja California México.</p>
-                            </div>
-                        </div>
-                        <div class="education-content">
-                            <div class="content">
-                                <div class="year"><i class='bx bxs-calendar'></i>September 2020 - October 2021</div>
-                                <h3>Electronic manufacturing engineer</h3>
-                                <p>Instituto de Energías Renovables - UNAM</p>
-                                <p>Cuernavaca, Morelos México.</p>
-                            </div>
-                        </div>
-                        <div class="education-content">
-                            <div class="content">
-                                <div class="year"><i class='bx bxs-calendar'></i>September 2019 - January 2020</div>
-                                <h3>Electronic maintenance and repair technician</h3>
-                                <p>GES RETURNS ENSENADA</p>
-                                <p>Ensenada, Baja California México.</p>
-                            </div>
-                        </div>
-                        <div class="education-content">
-                            <div class="content">
-                                <div class="year"><i class='bx bxs-calendar'></i>October 2018 - August 2019</div>
-                                <p>Different periods - by contract.</p>
-                                <h3>Production operator</h3>
-                                <p>Dialight de México</p>
-                                <p>Ensenada, Baja California México.</p>
+                                <div class="year"><i class='bx bxs-calendar'></i>Sep 2022</div>
+                                <h3>CAE Fundamentals</h3>
+                                <p>iESSS / Ansys</p>
                             </div>
                         </div>
                     </div>
-
                 </div>
-    </section>
-
-    <!--skills section design-->
-    <section class="skills" id="skills">
-        <h2 class="heading">My mechanical and electronic skills</span></h2>
-        <div class="skills-row">
-            <div class="skills-column">
-                <h3 class="title">Technical-professional skills</h3>
-                <div class="skills-box">
-                    <div class="skills-content">
-                        <div class="progress">
-                            <h3>3D and 2D design with SolidWorks<span>70%</span></h3>
-                            <div class="bar"><span></span></div>
+                <div class="education-column">
+                    <div class="education-box">
+                        <div class="education-content">
+                            <div class="content">
+                                <div class="year"><i class='bx bxs-calendar'></i>Aug 2015 – Jun 2020</div>
+                                <h3>Bachelor in Electromechanical Engineering</h3>
+                                <p>Instituto Tecnológico de Ensenada, Baja California, México</p>
+                            </div>
                         </div>
-
-                        <div class="progress">
-                            <h3>Technical drawing for manufacturing<span>70%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
-
-                        <div class="progress">
-                            <h3>Electronic spot or electrical resistance welding, tin soldering of electronic
-                                components.<span>80%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
-
-                        <div class="progress">
-                            <h3>Technical documentation of assembly manuals, operation manuals and instructions for
-                                use.<span>60%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
-
-                        <div class="progress">
-                            <h3>Electronic design of 1 and 2 layer PCBs, capture of electronic schematics and generate
-                                gerber files for manufacturing.<span>50%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
-
-                        <div class="progress">
-                            <h3>Preventive and corrective electronic maintenance<span>50%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
-
-                        <div class="progress">
-                            <h3>Basic sequence programming with Fanuc 200IC Robot for electric arc welding.<span>40%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="skills-column">
-                <h3 class="title">Soft skills</h3>
-                <div class="skills-box">
-                    <div class="skills-content">
-                        <div class="progress">
-                            <h3>Passionate about my work and profession 😎<span>--> 100%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
-
-                        <div class="progress">
-                            <h3>Initiative to innovate and make decisions 😉<span>--> 90%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
-
-                        <div class="progress">
-                            <h3>Work as a team to achieve goals 😉<span>--> 90%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
-
-                        <div class="progress">
-                            <h3>Self-motivated to learn new things 😉<span>-->100%</span></h3>
-                            <div class="bar"><span></span></div>
-                        </div>
-
-                        <div class="progress">
-                            <h3>Adaptation to change 😏<span>-->90%</span></h3>
-                            <div class="bar"><span></span></div>
+                        <div class="education-content">
+                            <div class="content">
+                                <div class="year"><i class='bx bxs-calendar'></i>May 2022</div>
+                                <h3>Root Cause Analysis</h3>
+                                <p>Udemy</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
+        <!-- Professional Experience block: three-column grid (content may repeat) -->
+        <div class="exp-block">
+            <h3 class="title">Professional Experience</h3>
+            <div class="education-row">
+                <div class="education-column">
+                    <div class="education-box">
+                        <div class="education-content">
+                            <div class="content">
+                                <div class="year"><i class='bx bxs-calendar'></i>Nov 2022 – Present</div>
+                                <h3>Junior Mechanical Design Engineer</h3>
+                                <p>Freelance mechanical design projects</p>
+                                <p>Remote</p>
+                            </div>
+                        </div>
+                        <div class="education-content">
+                            <div class="content">
+                                <div class="year"><i class='bx bxs-calendar'></i>Jul 2022 – Sep 2022</div>
+                                <h3>Cabinet Design Engineer</h3>
+                                <p>McCain Traffic Supply</p>
+                                <p>Tijuana, Baja California, México</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="education-column">
+                    <div class="education-box">
+                        <div class="education-content">
+                            <div class="content">
+                                <div class="year"><i class='bx bxs-calendar'></i>Sep 2020 – Oct 2021</div>
+                                <h3>Electronic Manufacturing Engineer</h3>
+                                <p>Instituto de Energías Renovables - UNAM</p>
+                                <p>Cuernavaca, Morelos, México</p>
+                            </div>
+                        </div>
+                        <div class="education-content">
+                            <div class="content">
+                                <div class="year"><i class='bx bxs-calendar'></i>Sep 2019 – Jan 2020</div>
+                                <h3>Electronic Maintenance Technician</h3>
+                                <p>GES RETURNS ENSENADA</p>
+                                <p>Ensenada, Baja California, México</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="education-column">
+                    <div class="education-box">
+                        <div class="education-content">
+                            <div class="content">
+                                <div class="year"><i class='bx bxs-calendar'></i>Nov 2022 – Present</div>
+                                <h3>Junior Mechanical Design Engineer</h3>
+                                <p>Freelance mechanical design projects</p>
+                                <p>Remote</p>
+                            </div>
+                        </div>
+                        <div class="education-content">
+                            <div class="content">
+                                <div class="year"><i class='bx bxs-calendar'></i>Jul 2022 – Sep 2022</div>
+                                <h3>Cabinet Design Engineer</h3>
+                                <p>McCain Traffic Supply</p>
+                                <p>Tijuana, Baja California, México</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!--skills section design-->
+    <section class="skills" id="skills">
+        <h2 class="heading">My mechanical and electronic skills</h2>
+        <div class="skills-row">
+            <div class="skills-column">
+                <h3 class="title">Technical skills</h3>
+                <div class="skills-box">
+                    <ul class="skills-list">
+                        <li>3D and 2D design with SolidWorks</li>
+                        <li>Technical drawing for manufacturing</li>
+                        <li>Spot and resistance welding, soldering electronic components</li>
+                        <li>Technical documentation and assembly manuals</li>
+                        <li>PCB design for single- and double-layer boards</li>
+                        <li>Preventive and corrective electronic maintenance</li>
+                        <li>Fanuc robot sequence programming for arc welding</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="skills-column">
+                <h3 class="title">Soft skills</h3>
+                <div class="skills-box">
+                    <ul class="skills-list">
+                        <li>Passionate and focused on professional growth</li>
+                        <li>Initiative to innovate and make decisions</li>
+                        <li>Collaborative team player</li>
+                        <li>Self-motivated to learn new things</li>
+                        <li>Adaptable to changing environments</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </section>
     <section class="portfolio" id="portfolio">
         <h4 class="heading">Evidence</span></h4>
@@ -712,45 +708,45 @@
             </div>
             </div>
             <div class="conteCarrouselController">
-                <a href="#itemCarrousel-1"><i class="fa-solid fa-circle-dot"></i></a>
-                <a href="#itemCarrousel-2"><i class="fa-solid fa-circle-dot"></i></a>
-                <a href="#itemCarrousel-3"><i class="fa-solid fa-circle-dot"></i></a>
-                <a href="#itemCarrousel-4"><i class="fa-solid fa-circle-dot"></i></a>
-                <a href="#itemCarrousel-5"><i class="fa-solid fa-circle-dot"></i></a>
-                <a href="#itemCarrousel-6"><i class="fa-solid fa-circle-dot"></i></a>
-                <a href="#itemCarrousel-7"><i class="fa-solid fa-circle-dot"></i></a>
-                <a href="#itemCarrousel-8"><i class="fa-solid fa-circle-dot"></i></a>
-                <a href="#itemCarrousel-9"><i class="fa-solid fa-circle-dot"></i></a>
-                <a href="#itemCarrousel-10"><i class="fa-solid fa-circle-dot"></i></a>
-                <a href="#itemCarrousel-11"><i class="fa-solid fa-circle-dot"></i></a>
-                <a href="#itemCarrousel-12"><i class="fa-solid fa-circle-dot"></i></a>
-                <a href="#itemCarrousel-13"><i class="fa-solid fa-circle-dot"></i></a>
-                <a href="#itemCarrousel-14"><i class="fa-solid fa-circle-dot"></i></a>
-                <a href="#itemCarrousel-15"><i class="fa-solid fa-circle-dot"></i></a>
-                <a href="#itemCarrousel-16"><i class="fa-solid fa-circle-dot"></i></a>
-                <a href="#itemCarrousel-17"><i class="fa-solid fa-circle-dot"></i></a>
-                <a href="#itemCarrousel-18"><i class="fa-solid fa-circle-dot"></i></a>
-                <a href="#itemCarrousel-19"><i class="fa-solid fa-circle-dot"></i></a>
-                <a href="#itemCarrousel-20"><i class="fa-solid fa-circle-dot"></i></a>
-                <a href="#itemCarrousel-21"><i class="fa-solid fa-circle-dot"></i></a>
-                <a href="#itemCarrousel-22"><i class="fa-solid fa-circle-dot"></i></a>
-                <a href="#itemCarrousel-23"><i class="fa-solid fa-circle-dot"></i></a>
-                <a href="#itemCarrousel-24"><i class="fa-solid fa-circle-dot"></i></a>
-                <a href="#itemCarrousel-25"><i class="fa-solid fa-circle-dot"></i></a>
-                <a href="#itemCarrousel-26"><i class="fa-solid fa-circle-dot"></i></a>
-                <a href="#itemCarrousel-27"><i class="fa-solid fa-circle-dot"></i></a>
-                <a href="#itemCarrousel-28"><i class="fa-solid fa-circle-dot"></i></a>
-                <a href="#itemCarrousel-29"><i class="fa-solid fa-circle-dot"></i></a>
-                <a href="#itemCarrousel-30"><i class="fa-solid fa-circle-dot"></i></a>
-                <a href="#itemCarrousel-31"><i class="fa-solid fa-circle-dot"></i></a>
-                <a href="#itemCarrousel-32"><i class="fa-solid fa-circle-dot"></i></a>
-                <a href="#itemCarrousel-33"><i class="fa-solid fa-circle-dot"></i></a>
-                <a href="#itemCarrousel-34"><i class="fa-solid fa-circle-dot"></i></a>
-                <a href="#itemCarrousel-35"><i class="fa-solid fa-circle-dot"></i></a>
-                <a href="#itemCarrousel-36"><i class="fa-solid fa-circle-dot"></i></a>
-                <a href="#itemCarrousel-37"><i class="fa-solid fa-circle-dot"></i></a>
-                <a href="#itemCarrousel-38"><i class="fa-solid fa-circle-dot"></i></a>
-                <a href="#itemCarrousel-39"><i class="fa-solid fa-circle-dot"></i></a>
+                <a href="#itemCarrousel-1"><i class="fa-solid fa-gear"></i></a>
+                <a href="#itemCarrousel-2"><i class="fa-solid fa-gear"></i></a>
+                <a href="#itemCarrousel-3"><i class="fa-solid fa-gear"></i></a>
+                <a href="#itemCarrousel-4"><i class="fa-solid fa-gear"></i></a>
+                <a href="#itemCarrousel-5"><i class="fa-solid fa-gear"></i></a>
+                <a href="#itemCarrousel-6"><i class="fa-solid fa-gear"></i></a>
+                <a href="#itemCarrousel-7"><i class="fa-solid fa-gear"></i></a>
+                <a href="#itemCarrousel-8"><i class="fa-solid fa-gear"></i></a>
+                <a href="#itemCarrousel-9"><i class="fa-solid fa-gear"></i></a>
+                <a href="#itemCarrousel-10"><i class="fa-solid fa-gear"></i></a>
+                <a href="#itemCarrousel-11"><i class="fa-solid fa-gear"></i></a>
+                <a href="#itemCarrousel-12"><i class="fa-solid fa-gear"></i></a>
+                <a href="#itemCarrousel-13"><i class="fa-solid fa-gear"></i></a>
+                <a href="#itemCarrousel-14"><i class="fa-solid fa-gear"></i></a>
+                <a href="#itemCarrousel-15"><i class="fa-solid fa-gear"></i></a>
+                <a href="#itemCarrousel-16"><i class="fa-solid fa-gear"></i></a>
+                <a href="#itemCarrousel-17"><i class="fa-solid fa-gear"></i></a>
+                <a href="#itemCarrousel-18"><i class="fa-solid fa-gear"></i></a>
+                <a href="#itemCarrousel-19"><i class="fa-solid fa-gear"></i></a>
+                <a href="#itemCarrousel-20"><i class="fa-solid fa-gear"></i></a>
+                <a href="#itemCarrousel-21"><i class="fa-solid fa-gear"></i></a>
+                <a href="#itemCarrousel-22"><i class="fa-solid fa-gear"></i></a>
+                <a href="#itemCarrousel-23"><i class="fa-solid fa-gear"></i></a>
+                <a href="#itemCarrousel-24"><i class="fa-solid fa-gear"></i></a>
+                <a href="#itemCarrousel-25"><i class="fa-solid fa-gear"></i></a>
+                <a href="#itemCarrousel-26"><i class="fa-solid fa-gear"></i></a>
+                <a href="#itemCarrousel-27"><i class="fa-solid fa-gear"></i></a>
+                <a href="#itemCarrousel-28"><i class="fa-solid fa-gear"></i></a>
+                <a href="#itemCarrousel-29"><i class="fa-solid fa-gear"></i></a>
+                <a href="#itemCarrousel-30"><i class="fa-solid fa-gear"></i></a>
+                <a href="#itemCarrousel-31"><i class="fa-solid fa-gear"></i></a>
+                <a href="#itemCarrousel-32"><i class="fa-solid fa-gear"></i></a>
+                <a href="#itemCarrousel-33"><i class="fa-solid fa-gear"></i></a>
+                <a href="#itemCarrousel-34"><i class="fa-solid fa-gear"></i></a>
+                <a href="#itemCarrousel-35"><i class="fa-solid fa-gear"></i></a>
+                <a href="#itemCarrousel-36"><i class="fa-solid fa-gear"></i></a>
+                <a href="#itemCarrousel-37"><i class="fa-solid fa-gear"></i></a>
+                <a href="#itemCarrousel-38"><i class="fa-solid fa-gear"></i></a>
+                <a href="#itemCarrousel-39"><i class="fa-solid fa-gear"></i></a>
             </div>
         </div>
     
