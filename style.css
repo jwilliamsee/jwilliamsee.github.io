@@ -188,7 +188,7 @@ body {
     align-items: center;
     flex-direction: column;
     gap: 2rem;
-    background: var(rgb(212, 204, 204));
+    background: #000;
     padding-bottom: 6rem;
 }
 
@@ -206,12 +206,17 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .about-img img {
-    width: 40%;
-    border-radius: 20%;
-    border: .2rem solid var(rgb(212, 204, 204));
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0;
+    border: .2rem solid rgb(212, 204, 204);
 }
 
 .about-img .circle-spin {
@@ -505,12 +510,6 @@ body {
 
 i{
     color: rgb(123, 255, 0);
-}
-
-img{
-    position: center;
-    width: 50%;
-    height: 100%;
 }
 
 .Contact-me{
